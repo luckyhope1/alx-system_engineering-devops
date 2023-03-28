@@ -1,7 +1,7 @@
 
 # ALX SYSTEM ENGINEERING - DEVOPS
 
-<img alt="coding" width="784" height="350" src="https://github.com/luckyhope1/alx-system_engineering-devops/blob/master/new.png" />
+<img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="600" height="300"/>
 
 This repository contains programs created for the _**ALX Software Engineering** Programs._ Your boy here is ready for collaborations, Currently sharpening my knowledge and skills of C and shell scripting. Hey you! Come let's do hard things. The following is a specific list of projects :
 - [0x00. Shell - Shell_Basics](https://github.com/luckyhope1/alx-system_engineering-devops/tree/master/0x00-shell_basics)
