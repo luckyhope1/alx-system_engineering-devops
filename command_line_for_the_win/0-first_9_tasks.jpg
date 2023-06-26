@@ -1,1 +1,8 @@
-command_line_for_the_win/0-first_9_tasks.jpg
+from PIL import Image
+
+# Open the image file
+image = Image.open("https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox/FMfcgzGsnLMDHRnSxtQZhLzCpFrqhPss?projector=1&messagePartId=0.1")
+
+# Perform any desired operations on the image
+# For example, you can display the image using the show() method
+image.show()
