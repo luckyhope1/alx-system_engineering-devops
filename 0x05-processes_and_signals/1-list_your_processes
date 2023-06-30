@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script displays a list of currently running processes with process hierarchy
+
+# Get the process tree using the `ps` command and format it with appropriate options
+process_tree=$(ps axo pid,ppid,user,%cpu,%mem,vsz,rss,tty,state,start,time,command --forest)
+
+# Display the process tree
+echo "$process_tree"
