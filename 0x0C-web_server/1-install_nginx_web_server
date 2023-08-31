@@ -1,9 +1,27 @@
-#!/usr/bin/env bash
-# installs nginx and configures it on a remote server
+s script installs and configures Nginx on an Ubuntu server
 
-# Update the package list and install nginx
-sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-echo "Hello World!" > /var/www/html/index.html
-service nginx restart
+# Update package list and install Nginx
+sudo apt-get update -y
+sudo apt-get install nginx -y
+
+# Verify if Nginx is installed successfully
+if ! [ -x "$(command -v nginx)" ]; then
+    echo "Nginx installation failed"
+    exit 1
+fi
+
+# Configure Nginx to listen on port 80 and return "Hello World!" on root path
+sudo tee /etc/nginx/sites-available/default <<EOF
+server {
+    listen 80;
+    server_name 227079-web-01;
+    location / {
+        echo "Hello World!";
+    }
+}
+EOF
+
+# Restart Nginx
+sudo service nginx restart
+
+echo "Nginx installed and configured successfully!"
